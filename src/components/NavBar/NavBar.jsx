@@ -11,7 +11,7 @@ const NavBar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } aria-current="page" to={"/"}>Home</NavLink>
+            <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } aria-current="page" to={"/"}>Inicio</NavLink>
             <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } to={"/productos"}>Productos</NavLink>
             <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } to={"/ubicanos"}>Ubicanos</NavLink>
           </div>

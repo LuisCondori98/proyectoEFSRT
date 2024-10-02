@@ -4,7 +4,7 @@
 
 .navbar-brand {
   color: white;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 .navbar-brand:hover {
@@ -27,4 +27,8 @@
 
 .link-active:hover {
   color: black;
+}
+
+.navbar-toggler {
+  background-color: white;
 }
