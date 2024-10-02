@@ -4,6 +4,8 @@ proyecto del curso experiencias formativas en situaciones reales de trabajo
 
 # Gamarucci
 
+https://gamarucci.netlify.app/
+
 ## Descripción
 
 Gamarucci es una aplicación web diseñada para ofrecer una experiencia completa de navegación y compra de productos. La aplicación cuenta con varias secciones que permiten a los usuarios explorar diferentes categorías de productos, ver las novedades, interactuar con bandas, y mantenerse al tanto de las publicaciones en el blog.
