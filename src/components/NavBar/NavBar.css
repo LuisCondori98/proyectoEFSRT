@@ -1,0 +1,30 @@
+.navbar {
+  background-color: black;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 25px;
+}
+
+.navbar-brand:hover {
+  color: white;
+}
+
+.nav-link {
+  color: white;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.link-active {
+  background-color: white;
+  border-radius: 7px;
+  color: black;
+}
+
+.link-active:hover {
+  color: black;
+}
