@@ -3,6 +3,7 @@
     "id": 1,
     "banda": "blink-182",
     "img": "blink182.jfif",
+    "category": "punk",
     "description": "Blink 182 - Poster de regalo (envios desde S/. 50)",
     "precio": 56.70
   },
@@ -73,6 +74,7 @@
     "id": 11,
     "banda": "Goldfinger",
     "img": "goldfinger.jpg",
+    "category": "punk",
     "description": "Goldfinger - Poster de regalo (envios desde S/. 50)",
     "precio": 40.20
   },
@@ -105,7 +107,7 @@
     "precio": 65.20
   },
   {
-    "id": 15,
+    "id": 16,
     "banda": "AC/DC",
     "img": "acdc.jpg",
     "description": "AC/DC - Poster de regalo (envios desde S/. 50)",

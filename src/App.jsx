@@ -8,6 +8,7 @@ import Bands from "./components/pages/Bands/Bands"
 import NewArrivals from "./components/pages/NewArrivals/NewArrivals"
 import Contact from "./components/pages/Contact/Contact"
 import Blog from "./components/pages/Blog/Blog"
+import ItemDetail from "./components/ItemDetail/ItemDetail"
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/blog" element={<Blog />}/>
         <Route path="/cart" element={<Cart />}/>
+        <Route path="/productos/:itemId" element={<ItemDetail />}/>
       </Routes>
     </BrowserRouter>
   )
