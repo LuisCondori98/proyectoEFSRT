@@ -55,18 +55,46 @@
     "description": "Three days grace - Poster de regalo (envios desde S/. 50)",
     "precio": 57.80
   },
-  { 
+  {
     "id": 9,
+    "banda": "Nirvana",
+    "img": "nirvana.webp",
+    "description": "Nirvana - Poster de regalo (envios desde S/. 50)",
+    "precio": 48.20
+  },
+  { 
+    "id": 10,
     "banda": "The Police",
     "img": "thepolice.avif",
     "description": "System of a down - Poster de regalo (envios desde S/. 50)",
     "precio": 82.90
   },
   { 
-    "id": 10,
+    "id": 11,
     "banda": "Goldfinger",
     "img": "goldfinger.jpg",
-    "description": "System of a down - Poster de regalo (envios desde S/. 50)",
+    "description": "Goldfinger - Poster de regalo (envios desde S/. 50)",
     "precio": 40.20
+  },
+  {
+    "id": 12,
+    "banda": "Foo Fighters",
+    "img": "foo.webp",
+    "description": "Foo Fighters - Poster de regalo (envios desde S/. 50)",
+    "precio": 60.20
+  },
+  {
+    "id": 13,
+    "banda": "Linkin Park",
+    "img": "linkinpark.png",
+    "description": "Linkin Park - Poster de regalo (envios desde S/. 50)",
+    "precio": 72.20
+  },
+  {
+    "id": 14,
+    "banda": "The Killers",
+    "img": "tekillers.webp",
+    "description": "The Killers - Poster de regalo (envios desde S/. 50)",
+    "precio": 48.20
   }
 ]

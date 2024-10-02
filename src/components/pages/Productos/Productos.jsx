@@ -21,7 +21,7 @@ const Productos = () => {
           database.map(prod => (
             <div className="item-producto">
               <div>
-                <img src={`/images/${prod.img}`} alt="" />
+                <img className="img-producto" src={`/images/${prod.img}`} alt="" />
                 <h4 className="band">Polo {prod.banda}</h4>
                 <h5>S/. {prod.precio}</h5>
               </div>

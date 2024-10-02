@@ -1,4 +1,4 @@
-img {
+.img-producto {
   height: 250px;
   object-fit: contain;
 }
@@ -41,7 +41,7 @@ img {
     font-size: 15px;
   }
 
-  img {
+  .img-producto {
     height: 150px;
   }
 
