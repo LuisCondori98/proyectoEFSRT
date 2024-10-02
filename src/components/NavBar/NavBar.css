@@ -1,9 +1,24 @@
-.navbar {
-  background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+.title {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  text-align: center;
+  padding: 30px;
+}
+
+.collapse {
+  /* position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s; */
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-brand {
-  color: white;
   font-size: 35px;
 }
 
@@ -11,18 +26,13 @@
   color: white;
 }
 
-.nav-link {
-  color: white;
-}
-
 .nav-link:hover {
-  color: white;
+  color: black;
 }
 
 .link-active {
-  background-color: white;
-  border-radius: 7px;
-  color: black;
+  text-decoration: underline 5px;
+  text-underline-offset: 8px;
 }
 
 .link-active:hover {
@@ -31,4 +41,38 @@
 
 .navbar-toggler {
   background-color: white;
+}
+
+.cart-res {
+  display: none;
+}
+
+.cart {
+  position: absolute;
+  color: rgb(161, 161, 161);
+  top: 40px;
+  right: 300px;
+}
+
+.user {
+  position: absolute;
+  color: rgb(161, 161, 161);
+  top: 40px;
+  right: 250px;
+}
+
+@media (max-width: 768px) {
+  .cart {
+    top: 100px;
+    left: 10px;
+    font-size: 30px !important;
+    z-index: 99;
+  }
+
+  .user {
+    top: 100px;
+    left: 60px;
+    font-size: 30px !important;
+    z-index: 99;
+  }
 }

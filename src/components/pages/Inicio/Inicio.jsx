@@ -1,10 +1,8 @@
-import Carrusel from "../../Carrusel/Carrusel"
 import "./Inicio.css"
 
 const Inicio = () => {
   return (
     <div>
-      {/* <Carrusel /> */}
       <section id="home" class="banner">
         <h1>Bienvenido a Gamarucci</h1>
         <p>Los mejores polos de tus bandas favoritas, en un solo lugar.</p>

@@ -96,5 +96,19 @@
     "img": "tekillers.webp",
     "description": "The Killers - Poster de regalo (envios desde S/. 50)",
     "precio": 48.20
+  },
+  {
+    "id": 15,
+    "banda": "Red hot chili peppers",
+    "img": "redhot.webp",
+    "description": "Red hot chili peppers - Poster de regalo (envios desde S/. 50)",
+    "precio": 65.20
+  },
+  {
+    "id": 15,
+    "banda": "AC/DC",
+    "img": "acdc.jpg",
+    "description": "AC/DC - Poster de regalo (envios desde S/. 50)",
+    "precio": 48.20
   }
 ]
