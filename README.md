@@ -32,7 +32,7 @@ Para instalar y ejecutar esta aplicación en tu entorno local, sigue estos pasos
    ```bash
    git clone https://github.com/LuisCondori98/proyectoEFSRT.git
 
-2. cd gamarucci
+2. cd proyectoEFSRT
 
 3. npm install
 
