@@ -12,14 +12,12 @@ const Productos = () => {
       .then(data => setDatabase(data))
   }, []);
 
-  console.log(database)
-
   return (
     <div>
       <div className="container-productos">
         {
           database.map(prod => (
-            <div className="item-producto">
+            <div className="item-producto" data-aos="flip-up">
               <div>
                 <img className="img-producto" src={`/images/${prod.img}`} alt="" />
                 <h4 className="band">Polo {prod.banda}</h4>

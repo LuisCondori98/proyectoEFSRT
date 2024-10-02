@@ -9,12 +9,14 @@
   gap: 20px;
   text-align: center;
   padding: 35px;
-  margin: 100px 0;
+  margin: 50px 0;
 }
 
 .item-producto {
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  border: rgb(201, 201, 201) 0.1px solid;
 }
 
 .description {

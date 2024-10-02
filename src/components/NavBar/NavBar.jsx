@@ -33,7 +33,7 @@ const NavBar = () => {
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
               <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } aria-current="page" to={"/"}>Home</NavLink>
-              <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } to={"/store"}>Store</NavLink>
+              <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } to={"/productos"}>Productos</NavLink>
               <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } to={"/coleccion"}>Coleccion</NavLink>
               <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } to={"/bands"}>Bands</NavLink>
               <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } to={"/new-arrivals"}>New Arrivals</NavLink>
