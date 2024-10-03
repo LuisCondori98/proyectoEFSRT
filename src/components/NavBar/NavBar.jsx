@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <div>
-      <Link to={"/"} className="title">GAMARUCCI</h1>
+      <Link to={"/"} className="title">GAMARUCCI</Link>
       <Link to={"/cart"} class="bi bi-cart4 cart" style={{fontSize: "35px", margin: "0 20px"}}></Link>
       <Link to={"/user"} class="bi bi-person user" style={{fontSize: "35px", margin: "0 20px"}}></Link>
       <nav className="navbar navbar-expand-lg" id="navbar">
