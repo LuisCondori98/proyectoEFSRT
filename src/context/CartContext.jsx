@@ -22,6 +22,12 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  const isInCart = (id) => {
+
+    return cart.some(prod => prod.id === id)
+}
+
+
   const deleteProduct = (productId) => {
 
     const updatedCart = cart.filter((item) => item.id !== productId);
@@ -31,8 +37,36 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  const getTotalQuantity = () => {
+
+    let totalQuantity = 0
+
+    cart.forEach(prod => {
+
+        totalQuantity += prod.quantity
+    })
+
+    return totalQuantity
+  }
+
+  const totalQuantity = getTotalQuantity()
+
+  const getTotal = () => {
+
+    let total = 0
+
+    cart.forEach(prod => {
+
+        total += prod.quantity * prod.price
+    }) 
+
+    return total
+  }
+
+  const total = getTotal()
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, deleteProduct }}>
+    <CartContext.Provider value={{ cart, addToCart, deleteProduct, totalQuantity, total }}>
       {children}
     </CartContext.Provider>
   );

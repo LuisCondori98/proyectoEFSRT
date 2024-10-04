@@ -4,7 +4,7 @@ import "./Cart.css"
 
 const Cart = () => {
 
-  const { cart, deleteProduct } = useContext(CartContext);
+  const { cart, deleteProduct, totalQuantity } = useContext(CartContext);
 
   const deleteProducts = (id) => {
 
@@ -24,14 +24,27 @@ const Cart = () => {
     });
   }
 
+  if(totalQuantity <= 0)
+    {
+      return ( 
+        <div className="container-cart-empty">
+          <img className="carrito" src={"/images/carrito.gif"} alt="" />
+          <h4>Su carrito esta vacio</h4>
+        </div>
+        )
+    }
+
   return (
     <div className="container-cart">
         {
           cart.map(prod => (
             <div className="cart-item" key={prod.id}>
               <img className="img-cart" src={`/images/${prod.img}`} alt="" />
-              <h4>Polo {prod.banda}</h4>
+              <div>
+              <h4>{prod.banda}</h4>
               <h4>S/. {prod.precio}</h4>
+              <h5 className="unidades">{prod.quantity} unidades</h5>
+              </div>
               <button className="btn btn-danger" onClick={() => deleteProducts(prod.id)}>Eliminar</button>
             </div>
           ))

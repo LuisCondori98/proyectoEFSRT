@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-
 .title {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
@@ -43,15 +42,14 @@
   background-color: white;
 }
 
-.cart-res {
-  display: none;
-}
-
 .cart {
+  display: flex;
   position: absolute;
   color: rgb(161, 161, 161);
   top: 40px;
   right: 300px;
+  font-size: 35px;
+  margin: 0 20px;
 }
 
 .user {
@@ -59,6 +57,8 @@
   color: rgb(161, 161, 161);
   top: 40px;
   right: 250px;
+  font-size: 35px;
+  margin: 0 20px;
 }
 
 @media (max-width: 768px) {

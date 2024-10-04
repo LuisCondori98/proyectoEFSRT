@@ -1,29 +1,25 @@
 import { Link, NavLink } from "react-router-dom"
 import "./NavBar.css"
+import { CartContext } from "../../context/CartContext"
+import { useContext } from "react"
 
 const NavBar = () => {
 
-  // let scrollpos = window.scrollY;
-
-  // window.onscroll = function() {
-
-  //   let currentScroll = window.scrollY;
-
-  //   if (scrollpos > currentScroll) {
-
-  //     document.getElementById("navbar").style.top = "0";
-  //   } else {
-
-  //     document.getElementById("navbar").style.top = "-100px";
-  //   }
-  //   scrollpos = currentScroll;
-  // }
+  const {totalQuantity} = useContext(CartContext)
 
   return (
-    <div>
+    <div className="container-navbar">
       <h1 to={"/"} className="title">GAMARUCCI</h1>
-      <Link to={"/cart"} class="bi bi-cart4 cart" style={{fontSize: "35px", margin: "0 20px"}}></Link>
-      <Link to={"/user"} class="bi bi-person user" style={{fontSize: "35px", margin: "0 20px"}}></Link>
+      {/* <Link to={"/cart"} class="bi bi-cart4 cart" style={{fontSize: "35px", margin: "0 20px"}}></Link> */}
+      {
+        totalQuantity > 0 ?
+        <div className="cart">
+          <Link to={"/cart"} class="bi bi-cart4" style={{color: "black"}}></Link><h6 style={{color: "black"}}>{totalQuantity}</h6>
+        </div>
+        :
+        <Link to={"/cart"} class="bi bi-cart4 cart" ></Link>
+      }
+      <Link to={"/user"} class="bi bi-person user"></Link>
       <nav className="navbar navbar-expand-lg" id="navbar">
         <div className="container-fluid">
           <label className="navbar-brand" ></label>

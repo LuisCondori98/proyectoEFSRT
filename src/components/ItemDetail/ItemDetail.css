@@ -30,6 +30,10 @@
   width: "40%";
 }
 
+.pagos {
+  height: 50px;
+}
+
 @media (max-width: 768px) {
 
   .item-detail-prod {
