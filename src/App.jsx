@@ -9,11 +9,15 @@ import NewArrivals from "./components/pages/NewArrivals/NewArrivals"
 import Contact from "./components/pages/Contact/Contact"
 import Blog from "./components/pages/Blog/Blog"
 import ItemDetail from "./components/ItemDetail/ItemDetail"
+import { CartProvider } from "./context/CartContext"
+import Register from "./components/pages/Register/Register"
+import User from "./components/pages/User/User"
 
 function App() {
 
   return (
     <BrowserRouter>
+    <CartProvider>
     <NavBar />
       <Routes>
         <Route path="/" element={<Inicio />}/>
@@ -24,8 +28,11 @@ function App() {
         <Route path="/contact" element={<Contact />}/>
         <Route path="/blog" element={<Blog />}/>
         <Route path="/cart" element={<Cart />}/>
+        <Route path="/user" element={<User />}/>
         <Route path="/productos/:itemId" element={<ItemDetail />}/>
+        <Route path="/register" element={<Register />}/>
       </Routes>
+      </CartProvider>
     </BrowserRouter>
   )
 }
