@@ -20,9 +20,9 @@ const Productos = () => {
             <div className="item-producto" data-aos="flip-up" key={prod.id}>
               <div>
                 <img className="img-producto" src={`/images/${prod.img}`} alt="" />
-                <h4 className="band">{prod.banda}</h4>
               </div>
-              <div>
+              <div style={{width: "30%"}}>
+                <h4 className="band">Polo {prod.banda}</h4>
                 <p className="description">{prod.description}</p>
                 <Link to={`/productos/${prod.id}`} className="btn btn-dark w-100">ver detalle</Link>
               </div>

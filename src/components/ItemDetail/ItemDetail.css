@@ -38,6 +38,7 @@
 
   .item-detail-prod {
     flex-direction: column;
+    padding: 15px;
   }
 
   .desc {
