@@ -1,6 +1,6 @@
 .img-producto {
   height: 250px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .container-productos {
@@ -15,7 +15,9 @@
 .item-producto {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
   border: rgb(201, 201, 201) 0.1px solid;
 }
 
@@ -36,7 +38,16 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    justify-content: space-around;
+    justify-content: space-between;
+    object-fit: cover;
+  }
+
+  .item-desc-detail {
+    width: 50%;
+  }
+
+  .item-img-detail {
+    width: 30%;
   }
 
   .description {

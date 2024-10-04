@@ -18,10 +18,10 @@ const Productos = () => {
         {
           database.map(prod => (
             <div className="item-producto" data-aos="flip-up" key={prod.id}>
-              <div>
+              <div className="item-img-detail" >
                 <img className="img-producto" src={`/images/${prod.img}`} alt="" />
               </div>
-              <div style={{width: "30%"}}>
+              <div className="item-desc-detail" >
                 <h4 className="band">Polo {prod.banda}</h4>
                 <p className="description">{prod.description}</p>
                 <Link to={`/productos/${prod.id}`} className="btn btn-dark w-100">ver detalle</Link>

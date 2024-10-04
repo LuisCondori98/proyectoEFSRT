@@ -12,8 +12,7 @@
 .sidebar {
   /* position: fixed;
   top: 0;
-  width: 100%;
-  transition: top 0.3s; */
+  transition: top 0.3s;*/
   display: flex;
   justify-content: center;
   padding: 25px;
@@ -82,6 +81,7 @@
 
   /* Estilos para la barra lateral */
   .sidebar {
+    text-align: center;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -89,7 +89,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #1d1d1de9;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -100,7 +100,7 @@
     padding: 10px 15px;
     text-decoration: none;
     font-size: 18px;
-    color: #818181;
+    color: #cecece;
     display: block;
     transition: 0.3s;
   }
