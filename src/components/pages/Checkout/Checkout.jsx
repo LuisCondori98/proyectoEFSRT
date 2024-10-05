@@ -11,7 +11,7 @@ const Checkout = () => {
 
   useEffect(() => {
 
-    if (total > 50) {
+    if (total >= 70) {
 
       setEnvio(0);
     } else {

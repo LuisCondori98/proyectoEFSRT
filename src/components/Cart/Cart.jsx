@@ -35,15 +35,14 @@ const Cart = () => {
   }
 
   // MUESTRA LA IMAGEN Y TEXTO DEL CARRITO VACIO
-  if(totalQuantity <= 0)
-    {
+  if(totalQuantity <= 0) {
       return ( 
         <div className="container-cart-empty">
           <img className="carrito" src={"/images/carrito.gif"} alt="" />
           <h4>Su carrito esta vacio</h4>
         </div>
         )
-    }
+  }
 
   return (
     <div>

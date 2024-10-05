@@ -48,7 +48,7 @@ export const CartProvider = ({ children }) => {
   // FUNCION PARA BORRAR PRODUCTO
   const deleteProduct = (productId) => {
 
-    const delProduct = cart.filter((item) => item.id !== productId);
+    const delProduct = cart.filter(prod => prod.id !== productId);
 
     setCart(delProduct);
 
