@@ -12,6 +12,7 @@ import ItemDetail from "./components/ItemDetail/ItemDetail"
 import { CartProvider } from "./context/CartContext"
 import Register from "./components/pages/Register/Register"
 import User from "./components/pages/User/User"
+import Checkout from "./components/pages/Checkout/Checkout"
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/user" element={<User />}/>
         <Route path="/productos/:itemId" element={<ItemDetail />}/>
         <Route path="/register" element={<Register />}/>
+        <Route path="/checkout" element={<Checkout />}/>
       </Routes>
       </CartProvider>
     </BrowserRouter>

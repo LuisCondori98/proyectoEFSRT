@@ -19,7 +19,7 @@
 }
 
 .img-cart {
-  height: 50px;
+  height: 200px;
 }
 
 .carrito {
@@ -35,7 +35,7 @@
   }
   
   .img-cart {
-    height: 120px;
+    height: 80px;
   }
 
   .cart-item {
@@ -62,5 +62,14 @@
 
   .carrito {
     height: 120px;
+  }
+
+  .btn-finalizar {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    width: 95%;
+    right: 10px;
+    left: 10px;
   }
 }
