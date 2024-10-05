@@ -93,11 +93,11 @@ const ItemDetail = () => {
           <img className="item-detail" src={`/images/${prodItem.img}`} alt=""/>
         </div>
         <div className="container-desc">
-          <h3 className="desc"><strong>{prodItem.description}</strong></h3>
+          <h4 className="desc"><strong>{prodItem.description}</strong></h4>
           <h3>Precio: S/. {prodItem.precio} <i class="bi bi-cash" style={{color: "green", fontSize: "30px"}}></i></h3>
-            <div>
+            <div style={{display: "flex", flexDirection: "column", gap: "25px", alignItems: "center"}}>
               <Link className="btn btn-dark" onClick={addCart}>Agregar al carrito</Link>
-              <div style={{display: "flex", justifyContent: "center", gap: "20px", padding: "7px", alignItems: "center"}}>
+              <div style={{display: "flex", justifyContent: "center", gap: "35px", padding: "7px", alignItems: "center"}}>
                 <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Decrement()}> ➖ </button>
                 <h3>{quantity}</h3>
                 <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Increment()}> ➕ </button>

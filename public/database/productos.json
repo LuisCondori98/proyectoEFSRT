@@ -5,7 +5,7 @@
     "img": "blink182.jfif",
     "category": "punk",
     "stock": 20,
-    "description": "Blink 182 - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 56.70
   },
   {
@@ -13,7 +13,7 @@
     "banda": "Deftones",
     "img": "deftones.jpg",
     "stock": 15,
-    "description": "Deftones - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 45.70
   },
   { 
@@ -21,7 +21,7 @@
     "banda": "Green Day",
     "img": "greenday.avif",
     "stock": 9,
-    "description": "Green day - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 71.50
   },
   { 
@@ -29,7 +29,7 @@
     "banda": "Guns and Rose",
     "img": "guns.jpg",
     "stock": 17,
-    "description": "Guns and Rose - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 50.60
   },
   { 
@@ -37,7 +37,7 @@
     "banda": "Metallica",
     "img": "metallica.png",
     "stock": 18,
-    "description": "Metallica - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 62.90
   },
   { 
@@ -45,7 +45,7 @@
     "banda": "Rammstein",
     "img": "rammstein.avif",
     "stock": 23,
-    "description": "Rammstein - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 48.40
   },
   { 
@@ -53,7 +53,7 @@
     "banda": "System of a down",
     "img": "soad.avif",
     "stock": 7,
-    "description": "System of a down - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 68.50
   },
   { 
@@ -61,7 +61,7 @@
     "banda": "Three Days Grace",
     "img": "tdg.webp",
     "stock": 5,
-    "description": "Three days grace - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 57.80
   },
   {
@@ -69,7 +69,7 @@
     "banda": "Nirvana",
     "img": "nirvana.webp",
     "stock": 10,
-    "description": "Nirvana - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 48.20
   },
   { 
@@ -77,7 +77,7 @@
     "banda": "The Police",
     "img": "thepolice.avif",
     "stock": 28,
-    "description": "System of a down - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 82.90
   },
   { 
@@ -86,7 +86,7 @@
     "img": "goldfinger.jpg",
     "category": "punk",
     "stock": 9,
-    "description": "Goldfinger - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 40.20
   },
   {
@@ -94,7 +94,7 @@
     "banda": "Foo Fighters",
     "img": "foo.webp",
     "stock": 13,
-    "description": "Foo Fighters - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 60.20
   },
   {
@@ -102,7 +102,7 @@
     "banda": "Linkin Park",
     "img": "linkinpark.png",
     "stock": 20,
-    "description": "Linkin Park - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 72.20
   },
   {
@@ -110,7 +110,7 @@
     "banda": "The Killers",
     "img": "tekillers.webp",
     "stock": 21,
-    "description": "The Killers - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 48.20
   },
   {
@@ -118,7 +118,7 @@
     "banda": "Red hot chili peppers",
     "img": "redhot.webp",
     "stock": 3,
-    "description": "Red hot chili peppers - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 65.20
   },
   {
@@ -126,7 +126,7 @@
     "banda": "AC/DC",
     "img": "acdc.jpg",
     "stock": 28,
-    "description": "AC/DC - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 48.20
   },
   {
@@ -134,7 +134,7 @@
     "banda": "The strokes",
     "img": "thestrokes.webp",
     "stock": 12,
-    "description": "The strokes - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 33.20
   },
   {
@@ -142,7 +142,7 @@
     "banda": "Misfits",
     "img": "misfits.jpg",
     "stock": 29,
-    "description": "Misfits - Poster de regalo (envios desde S/. 50)",
+    "description": "Blink 182 - Poster de regalo (envios gratis a partir de S/. 70)",
     "precio": 48.20
   }
 ]

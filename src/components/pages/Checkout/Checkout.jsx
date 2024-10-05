@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect, useState } from "react"
 import { CartContext } from "../../../context/CartContext"
 import "./Checkout.css"
 
@@ -6,8 +6,15 @@ const Checkout = () => {
 
   // USANDO EL TOTAL DEL CONTEXTO DEL CARRITO
   const { total } = useContext(CartContext)
+  const [envio, setEnvio] = useState(15)
 
-  let envio = 10
+  useEffect(() => {
+    if (total > 50) {
+      setEnvio(0);
+    } else {
+      setEnvio(15);
+    }
+  }, [total]);
 
   const numeroRan = Math.floor(Math.random() * 1000000000000)
 
