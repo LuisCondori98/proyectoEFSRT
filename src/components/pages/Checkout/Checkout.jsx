@@ -23,7 +23,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <section>
+      <section className="container-form-tarjeta">
         <form action="#" onSubmit={pagar}>
           <label for="nombre">Nombre del titular</label>
           <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />

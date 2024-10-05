@@ -31,10 +31,17 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-.total {
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 15px;
+@media (max-width: 768px) {
+
+  .container-form-tarjeta {
+    height: 100vh;
+  }
+
+  .total {
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+  }
 }
