@@ -5,9 +5,9 @@ import "./ItemDetail.css"
 
 const ItemDetail = () => {
 
+  const { addToCart } = useContext(CartContext);
   const [prodItem, setProdItem] = useState(null)
   const [quantity, setQuantity] = useState(1)
-  const { addToCart, totalQuantity } = useContext(CartContext);
   const { itemId } = useParams()
 
   //LLAMANDO AL ARCHIVO PRODUCTOS.JSON
@@ -43,7 +43,7 @@ const ItemDetail = () => {
     
   }, [itemId])
 
-  // AGREGAR PRDOUCTO AL CARRITO
+  // FUNCION PARA AGREGAR PRDOUCTO AL CARRITO
   const addCart = () => {
 
     const productToAdd = {
@@ -54,8 +54,10 @@ const ItemDetail = () => {
       img: prodItem.img
     }
 
+    // FUNCION DEL CARTCONTEXT
     addToCart(productToAdd)
 
+    // LIBRERIA TOASTIFY
     Toastify({
       text: "agregado al carrito",
       className: "info",
@@ -95,14 +97,18 @@ const ItemDetail = () => {
         <div className="container-desc">
           <h4 className="desc"><strong>{prodItem.description}</strong></h4>
           <h3>Precio: S/. {prodItem.precio} <i class="bi bi-cash" style={{color: "green", fontSize: "30px"}}></i></h3>
-            <div style={{display: "flex", flexDirection: "column", gap: "25px", alignItems: "center"}}>
-              <Link className="btn btn-dark" onClick={addCart}>Agregar al carrito</Link>
-              <div style={{display: "flex", justifyContent: "center", gap: "35px", padding: "7px", alignItems: "center"}}>
-                <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Decrement()}> ➖ </button>
-                <h3>{quantity}</h3>
-                <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Increment()}> ➕ </button>
-              </div>
+          <div style={{display: "flex", flexDirection: "column", gap: "25px", alignItems: "center"}}>
+            <Link className="btn btn-dark" onClick={addCart}>Agregar al carrito</Link>
+            <div style={{display: "flex", justifyContent: "center", gap: "35px", padding: "7px", alignItems: "center"}}>
+              <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Decrement()}> ➖ </button>
+              <h3>{quantity}</h3>
+              <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Increment()}> ➕ </button>
             </div>
+          </div>
+          <div>
+            <Link to={"/productos"} className="btn btn-primary m-2">Seguir comprando</Link>
+            <Link to={"/cart"} className="btn btn-success m-2">Ir al carrito</Link>
+          </div>
           <div>
             <h4>Metodos de pago</h4>
             <div style={{display: "flex", gap: "10px", justifyContent: "center"}}>

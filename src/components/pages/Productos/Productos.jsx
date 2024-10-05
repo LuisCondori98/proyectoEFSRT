@@ -8,6 +8,7 @@ const Productos = () => {
 
   const [database, setDatabase] = useState([]);
 
+  // LLAMANDO AL ARCHIVO PRODUCTS.JSON PARA MOSTRAR EN PRODUCTOS
   useEffect(() => {
     fetch('/database/productos.json')
       .then(response => response.json())

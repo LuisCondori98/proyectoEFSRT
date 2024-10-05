@@ -4,7 +4,7 @@ const Register = () => {
 
   const register = () => {
 
-    
+    console.info("registrado")
   }
 
   return (

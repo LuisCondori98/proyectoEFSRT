@@ -1,7 +1,7 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../context/CartContext";
 import "./Cart.css"
-import { Link } from "react-router-dom";
 
 const Cart = () => {
 
@@ -13,6 +13,7 @@ const Cart = () => {
   // BORRADO DE PRODUCTO
   const deleteProducts = (id) => {
 
+    // LIBRERIA SWEETALERT
     Swal.fire({
       icon: "error",
       title: "Estas seguro de eliminar?",
@@ -20,10 +21,14 @@ const Cart = () => {
       showCancelButton: true,
       confirmButtonText: "Si",
     }).then((result) => {
+
       if (result.isConfirmed) {
+
         Swal.fire("Eliminado", "", "success");
         deleteProduct(id);
+        
       } else if (result.isDenied) {
+
         Swal.fire("Changes are not saved", "", "info");
       }
     });

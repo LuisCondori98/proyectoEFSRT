@@ -19,18 +19,10 @@ const User = () => {
       passworduser: password
     }
 
+    // CREA EL OBJETO USER Y LO AÑADE AL LOCALSTORAGE
     localStorage.setItem("user", JSON.stringify(userArr))
 
     navigate("/")
-
-    // if(user === "admin") {
-
-    //   localStorage.setItem("user", JSON.stringify(userArr))
-
-    //   navigate("/")
-    // }
-
-    console.log(userArr)
   }
 
   return (

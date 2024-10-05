@@ -8,14 +8,19 @@ const Checkout = () => {
   const { total } = useContext(CartContext)
   const [envio, setEnvio] = useState(15)
 
+
   useEffect(() => {
+
     if (total > 50) {
+
       setEnvio(0);
     } else {
+
       setEnvio(15);
     }
   }, [total]);
 
+  // CREANDO UN VALOR NUMERICO RANDOM PARA EL TICKET DE COMPRA EXITOSA
   const numeroRan = Math.floor(Math.random() * 1000000000000)
 
   // ALERTA DE COMPRA EXITOSA CON SWEETALERT
@@ -23,6 +28,7 @@ const Checkout = () => {
 
     e.preventDefault()
 
+    // LIBRERIA SWEETALERT
     Swal.fire({
       title: `Numero de ticket GC-${numeroRan}`,
       text: "Gracias por su compra",
@@ -34,7 +40,7 @@ const Checkout = () => {
   }
 
   return (
-    <div>
+    <div className="container-checkout">
       <section className="container-form-tarjeta">
         <form action="#" onSubmit={pagar}>
           <label for="nombre">Nombre del titular</label>
@@ -52,10 +58,10 @@ const Checkout = () => {
           <input type="submit" value="Realizar pago" />
       </form>
       </section>
-      <div style={{textAlign: "center", backgroundColor: "rgb(251, 160, 42)", color: "white", padding: "7px"}} className="total">
-        <h5>Total: {total}</h5>
-        <h5>Envio: {envio}</h5>
-        <h4>El total es {Math.floor(total + envio)}</h4>
+      <div className="total">
+        <h5>Total: S/. {total}</h5>
+        <h5>Envio: S/. {envio}</h5>
+        <h4>El total es S/. {Math.floor(total + envio)}</h4>
       </div>
     </div>
   )

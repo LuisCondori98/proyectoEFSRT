@@ -1,26 +1,42 @@
 import React, { createContext, useState, useEffect } from "react";
 
+// SE CREA EL CONTEXTO EN LA VARIABLE CARTCONTEXT
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
 
   const [cart, setCart] = useState([]);
 
+  // OBTENGO EL OBJETO CART DEL LOCALSTORAGE 
   useEffect(() => {
 
-    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    const getCart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    setCart(savedCart);
+    setCart(getCart);
   }, []);
 
   // FUNCION PARA AGREGAR PRODUCTO AL CARRITO
   const addToCart = (product) => {
 
-    const updatedCart = [...cart, product];
+    if(!isInCart(product.id)){
+    
+      const productToAdd = [...cart, product];
 
-    setCart(updatedCart);
+      setCart(productToAdd);
 
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+      localStorage.setItem("cart", JSON.stringify(productToAdd)); 
+    } else {
+
+      const prodModifyQuantity = cart.map(prod => prod.id === product.id ?
+                                            { ...prod, quantity: prod.quantity + product.quantity }
+                                            : 
+                                            prod
+                                          );
+      
+      setCart(prodModifyQuantity);
+      
+      localStorage.setItem("cart", JSON.stringify(prodModifyQuantity));
+    }
   };
 
   // FUNCION QUE REVISA SI EXISTE EL PRODUCTO
@@ -32,11 +48,12 @@ export const CartProvider = ({ children }) => {
   // FUNCION PARA BORRAR PRODUCTO
   const deleteProduct = (productId) => {
 
-    const updatedCart = cart.filter((item) => item.id !== productId);
+    const delProduct = cart.filter((item) => item.id !== productId);
 
-    setCart(updatedCart);
+    setCart(delProduct);
 
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    // AGERGO EL OBJETO PRODUCTO DEL PARAMETRO productId Y LO AÑADO AL LOCALSTORAGE
+    localStorage.setItem("cart", JSON.stringify(delProduct));
   };
 
   // FUNCION QUE DEVUELVE LA CANTIDAD DE PRODUCTOS AGREGADOS
@@ -70,6 +87,7 @@ export const CartProvider = ({ children }) => {
   const total = getTotal()
 
   return (
+    // ENVIA LAS FUNCIONES Y VARIABLES PARA TODA LA APLICACION
     <CartContext.Provider value={{ cart, addToCart, deleteProduct, totalQuantity, total }}>
       {children}
     </CartContext.Provider>

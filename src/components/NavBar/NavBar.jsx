@@ -9,17 +9,20 @@ const NavBar = () => {
 
   // EFECTO NAVBAR AMPLIANDOSE PARA EL MOBILE
   const toggleMenu = () => {
+
     const sidebar = document.getElementById("sidebar");
+
     if (sidebar.style.width === "100%") {
+
       sidebar.style.width = "0";
     } else {
+
       sidebar.style.width = "100%";
     }
   }
 
+  // OBTENGO EL OBJETO USER DEL LOCALSTORAGE
   let user = JSON.parse(localStorage.getItem("user"))
-
-  console.log(user)
 
   return (
     <div className="container-navbar">
