@@ -4,10 +4,12 @@ import "./Cart.css"
 
 const Cart = () => {
 
-  const { cart, deleteProduct, totalQuantity } = useContext(CartContext);
-
   document.title = "Gamarucci | Carrito"
 
+  // USANDO FUNCIONES DEL COTENTEXTO
+  const { cart, deleteProduct, totalQuantity } = useContext(CartContext);
+
+  // BORRADO DE PRODUCTO
   const deleteProducts = (id) => {
 
     Swal.fire({
@@ -26,6 +28,7 @@ const Cart = () => {
     });
   }
 
+  // MUESTRA LA IMAGEN Y TEXTO DEL CARRITO VACIO
   if(totalQuantity <= 0)
     {
       return ( 

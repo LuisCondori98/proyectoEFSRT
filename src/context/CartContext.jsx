@@ -13,6 +13,7 @@ export const CartProvider = ({ children }) => {
     setCart(savedCart);
   }, []);
 
+  // FUNCION PARA AGREGAR PRODUCTO AL CARRITO
   const addToCart = (product) => {
 
     const updatedCart = [...cart, product];
@@ -22,12 +23,13 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  // FUNCION QUE REVISA SI EXISTE EL PRODUCTO
   const isInCart = (id) => {
 
     return cart.some(prod => prod.id === id)
-}
+  }
 
-
+  // FUNCION PARA BORRAR PRODUCTO
   const deleteProduct = (productId) => {
 
     const updatedCart = cart.filter((item) => item.id !== productId);
@@ -37,6 +39,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
+  // FUNCION QUE DEVUELVE LA CANTIDAD DE PRODUCTOS AGREGADOS
   const getTotalQuantity = () => {
 
     let totalQuantity = 0
@@ -51,6 +54,7 @@ export const CartProvider = ({ children }) => {
 
   const totalQuantity = getTotalQuantity()
 
+  // FUNCION QUE MUESTRA EL TOTAL DEL CARRITO
   const getTotal = () => {
 
     let total = 0
@@ -62,7 +66,7 @@ export const CartProvider = ({ children }) => {
 
     return total
   }
-
+  
   const total = getTotal()
 
   return (

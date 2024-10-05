@@ -10,6 +10,7 @@ const ItemDetail = () => {
   const { addToCart, totalQuantity } = useContext(CartContext);
   const { itemId } = useParams()
 
+  //LLAMANDO AL ARCHIVO PRODUCTOS.JSON
   useEffect(() => {
 
     const fetchData = async () => {
@@ -42,6 +43,7 @@ const ItemDetail = () => {
     
   }, [itemId])
 
+  // AGREGAR PRDOUCTO AL CARRITO
   const addCart = () => {
 
     const productToAdd = {
@@ -55,7 +57,7 @@ const ItemDetail = () => {
     addToCart(productToAdd)
 
     Toastify({
-      text: "agregado",
+      text: "agregado al carrito",
       className: "info",
       style: {
         background: "black",
@@ -63,6 +65,7 @@ const ItemDetail = () => {
     }).showToast();
   }
 
+  // BOTON DE AGREGAR MAS PRODUCTO
   const Increment = () => {
 
     if(quantity < prodItem.stock) {
@@ -71,6 +74,7 @@ const ItemDetail = () => {
     }
   }
 
+  // BOTON DE RESTAR PRODUCTO
   const Decrement = () => {
 
     if(quantity > 1 ){
