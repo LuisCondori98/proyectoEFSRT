@@ -19,6 +19,8 @@ const Checkout = () => {
       text: "Gracias por su compra",
       icon: "success"
     });
+
+    localStorage.removeItem("cart")
   }
 
   return (
@@ -29,7 +31,7 @@ const Checkout = () => {
           <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
 
           <label for="tarjeta">Número de tarjeta</label>
-          <input type="text" id="tarjeta" name="tarjeta" placeholder="1234 5678 9012 3456" required pattern="\d{16}" />
+          <input type="number" id="tarjeta" name="tarjeta" placeholder="1234 5678 9012 3456" required pattern="\d{16}" />
 
           <label for="vencimiento">Fecha de vencimiento</label>
           <input type="month" id="vencimiento" name="vencimiento" required />
@@ -41,8 +43,8 @@ const Checkout = () => {
       </form>
       </section>
       <div style={{textAlign: "center"}} className="total">
-        <h2 >Precio con envio: {total + envio}</h2>
-        <h2 style={{backgroundColor: "rgb(251, 160, 42)", color: "white", padding: "7px"}}>El total es {total}</h2>
+        <h4>Precio con envio: {Math.floor(total + envio)}</h4>
+        <h4 style={{backgroundColor: "rgb(251, 160, 42)", color: "white", padding: "7px"}}>El total es {Math.ceil(total)}</h4>
       </div>
     </div>
   )
