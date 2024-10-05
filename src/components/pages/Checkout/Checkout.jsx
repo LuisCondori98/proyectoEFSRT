@@ -4,12 +4,14 @@ import "./Checkout.css"
 
 const Checkout = () => {
 
-  const {cart, total} = useContext(CartContext)
+  // USANDO EL TOTAL DEL CONTEXTO DEL CARRITO
+  const { total } = useContext(CartContext)
 
   let envio = 10
 
   const numeroRan = Math.floor(Math.random() * 1000000000000)
 
+  // ALERTA DE COMPRA EXITOSA CON SWEETALERT
   const pagar = (e) => {
 
     e.preventDefault()
@@ -20,6 +22,7 @@ const Checkout = () => {
       icon: "success"
     });
 
+    // BORRANDO DEL LOCALSTORAGE EL CARRITO
     localStorage.removeItem("cart")
   }
 
@@ -42,9 +45,10 @@ const Checkout = () => {
           <input type="submit" value="Realizar pago" />
       </form>
       </section>
-      <div style={{textAlign: "center"}} className="total">
-        <h4>Precio con envio: {Math.floor(total + envio)}</h4>
-        <h4 style={{backgroundColor: "rgb(251, 160, 42)", color: "white", padding: "7px"}}>El total es {Math.ceil(total)}</h4>
+      <div style={{textAlign: "center", backgroundColor: "rgb(251, 160, 42)", color: "white", padding: "7px"}} className="total">
+        <h5>Total: {total}</h5>
+        <h5>Envio: {envio}</h5>
+        <h4>El total es {Math.floor(total + envio)}</h4>
       </div>
     </div>
   )

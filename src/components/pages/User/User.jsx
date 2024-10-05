@@ -1,27 +1,44 @@
-import { Link, Navigate, useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import "./User.css"
+import { useState } from "react"
 
 const User = () => {
 
   document.title = "Gamarucci | Login"
 
+  const [user, setUser] = useState("")
+  const [password, setPassword] = useState("")
+
+  // USANDO EL HOOK USE NAVIGATE PARA REDIRECCIONAR
   const navigate = useNavigate()
 
-  const login = (e) => {
+  const login = () => {
 
-    e.preventDefault()
+    let userArr = {
+      username: user,
+      passworduser: password
+    }
 
-    console.log("ingreso")
+    localStorage.setItem("user", JSON.stringify(userArr))
 
     navigate("/")
+
+    // if(user === "admin") {
+
+    //   localStorage.setItem("user", JSON.stringify(userArr))
+
+    //   navigate("/")
+    // }
+
+    console.log(userArr)
   }
 
   return (
     <div>
       <form action="">
         <h2>Login</h2>
-        <input type="email" placeholder="Ingrese correo" required/>
-        <input type="password" placeholder="Contraseña" required/>
+        <input type="text" placeholder="Ingrese correo" onChange={(e) => setUser(e.target.value)} required/>
+        <input type="password" placeholder="Contraseña" onChange={(e) => setPassword(e.target.value)} required/>
         <input type="submit" value="Ingresar" className="btn btn-dark" onClick={login}/>
         <Link to={"/register"}>Crear cuenta</Link>
       </form>

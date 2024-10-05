@@ -16,7 +16,10 @@ const NavBar = () => {
       sidebar.style.width = "100%";
     }
   }
-  
+
+  let user = JSON.parse(localStorage.getItem("user"))
+
+  console.log(user)
 
   return (
     <div className="container-navbar">
@@ -25,12 +28,17 @@ const NavBar = () => {
       {
         totalQuantity > 0 ?
         <div className="cart">
-          <Link to={"/cart"} class="bi bi-cart4" style={{color: "black"}}></Link><h6 style={{color: "black"}}>{totalQuantity}</h6>
+          <Link to={"/cart"} class="bi bi-cart4" style={{color: "black"}}></Link><h6>{totalQuantity}</h6>
         </div>
         :
         <Link to={"/cart"} class="bi bi-cart4 cart" ></Link>
       }
-      <Link to={"/user"} class="bi bi-person user"></Link>
+      {
+        user ?
+        <Link to={"/profile"} className="username">Hola, {user.username}!</Link>
+        :
+        <Link to={"/user"} class="bi bi-person user"></Link>
+      }
       <nav id="sidebar" class="sidebar" style={{zIndex: "99"}}>
         <a href="javascript:void(0)" class="close-btn" onClick={() => toggleMenu()}>×</a>
         <NavLink className={({isActive}) => isActive? "nav-link link-active" : "nav-link" } aria-current="page" to={"/"}>Home</NavLink>
