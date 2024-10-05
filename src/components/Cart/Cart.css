@@ -19,6 +19,10 @@
 }
 
 .img-cart {
+  height: 50px;
+}
+
+.carrito {
   height: 200px;
 }
 

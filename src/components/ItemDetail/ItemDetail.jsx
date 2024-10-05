@@ -16,7 +16,7 @@ const ItemDetail = () => {
 
       try {
 
-        const response = await fetch('/database/database.json')
+        const response = await fetch('/database/productos.json')
 
         const data = await response.json()
 
@@ -93,10 +93,10 @@ const ItemDetail = () => {
           <h3>Precio: S/. {prodItem.precio} <i class="bi bi-cash" style={{color: "green", fontSize: "30px"}}></i></h3>
             <div>
               <Link className="btn btn-dark" onClick={addCart}>Agregar al carrito</Link>
-              <div style={{display: "flex", justifyContent: "center", gap: "20px"}}>
-                <button className="btn btn-outline-light" onClick={() => Decrement()}> ➖ </button>
+              <div style={{display: "flex", justifyContent: "center", gap: "20px", padding: "7px", alignItems: "center"}}>
+                <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Decrement()}> ➖ </button>
                 <h3>{quantity}</h3>
-                <button className="btn btn-outline-light" onClick={() => Increment()}> ➕ </button>
+                <button className="btn btn-outline-light" style={{border: "black solid"}} onClick={() => Increment()}> ➕ </button>
               </div>
             </div>
           <div>

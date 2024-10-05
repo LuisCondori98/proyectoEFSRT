@@ -128,5 +128,21 @@
     "stock": 28,
     "description": "AC/DC - Poster de regalo (envios desde S/. 50)",
     "precio": 48.20
+  },
+  {
+    "id": 17,
+    "banda": "The strokes",
+    "img": "thestrokes.webp",
+    "stock": 12,
+    "description": "The strokes - Poster de regalo (envios desde S/. 50)",
+    "precio": 33.20
+  },
+  {
+    "id": 18,
+    "banda": "Misfits",
+    "img": "misfits.jpg",
+    "stock": 29,
+    "description": "Misfits - Poster de regalo (envios desde S/. 50)",
+    "precio": 48.20
   }
 ]

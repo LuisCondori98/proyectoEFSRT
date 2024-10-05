@@ -6,6 +6,8 @@ const Cart = () => {
 
   const { cart, deleteProduct, totalQuantity } = useContext(CartContext);
 
+  document.title = "Gamarucci | Carrito"
+
   const deleteProducts = (id) => {
 
     Swal.fire({

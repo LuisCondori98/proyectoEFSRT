@@ -1,6 +1,9 @@
 import React from 'react'
 
 const Contact = () => {
+
+  document.title = "Gamarucci | Contact"
+
   return (
     <section id="contact" class="contact-section">
         <h2>Contáctanos</h2>

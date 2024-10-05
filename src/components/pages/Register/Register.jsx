@@ -1,8 +1,10 @@
 const Register = () => {
 
+  document.title = "Gamarucci | Registro"
+
   const register = () => {
 
-
+    
   }
 
   return (
@@ -13,7 +15,7 @@ const Register = () => {
         <input type="text" placeholder="Apellidos" required/>
         <input type="email" placeholder="Ingrese correo" required/>
         <input type="password" placeholder="Contraseña" required/>
-        <input type="submit" value="Registrar" className="btn btn-primary" onClick={register}/>
+        <input type="submit" value="Registrar" className="btn btn-success" onClick={register}/>
       </form>
     </div>
   )

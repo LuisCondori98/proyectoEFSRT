@@ -1,6 +1,9 @@
 import "./Inicio.css"
 
 const Inicio = () => {
+
+document.title = "Gamarucci"
+
   return (
     <div>
       <section id="home" class="banner">
