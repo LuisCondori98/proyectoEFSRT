@@ -8,10 +8,23 @@ const Checkout = () => {
 
   let envio = 10
 
+  const numeroRan = Math.floor(Math.random() * 1000000000000)
+
+  const pagar = (e) => {
+
+    e.preventDefault()
+
+    Swal.fire({
+      title: `Numero de ticket GC-${numeroRan}`,
+      text: "Gracias por su compra",
+      icon: "success"
+    });
+  }
+
   return (
     <div>
       <section>
-        <form action="/realizar-pago" method="POST">
+        <form action="#" onSubmit={pagar}>
           <label for="nombre">Nombre del titular</label>
           <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required />
 
@@ -27,7 +40,10 @@ const Checkout = () => {
           <input type="submit" value="Realizar pago" />
       </form>
       </section>
-      <h2 className="total" style={{backgroundColor: "rgb(251, 160, 42)", color: "white", padding: "7px"}}>El total es {total}</h2>
+      <div style={{textAlign: "center"}} className="total">
+        <h2 >Precio con envio: {total + envio}</h2>
+        <h2 style={{backgroundColor: "rgb(251, 160, 42)", color: "white", padding: "7px"}}>El total es {total}</h2>
+      </div>
     </div>
   )
 }
