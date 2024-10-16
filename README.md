@@ -4,7 +4,7 @@ proyecto del curso experiencias formativas en situaciones reales de trabajo
 
 # Gamarucci
 
-https://gamarucci.netlify.app/
+https://gamarucci.vercel.app/
 
 ## Descripción
 
